@@ -1,4 +1,4 @@
-# Gesture Controlled Virtual Mouse 🖐️🖱️
+# Gesture Controlled Virtual Mouse
 
 A real-time gesture-controlled virtual mouse system using a webcam.  
 The project allows users to control mouse movement and actions using hand gestures without any physical mouse.

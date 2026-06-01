@@ -119,9 +119,3 @@ Add screenshots, GIFs, or a demo video here to showcase the project.
 Megh Patel
 
 Developed as a Computer Vision and Human-Computer Interaction project using OpenCV and MediaPipe.
-
----
-
-## 📄 License
-
-This project is open-source and available under the MIT License.

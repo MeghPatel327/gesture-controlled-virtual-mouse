@@ -25,6 +25,7 @@ pTime = 0
 left_click_flag = True
 right_click_flag = True
 desktop_flag = True
+middle_click_flag = True
 
 prev_cursor_pos = None
 cursor_sensitivity = 1.5
@@ -41,7 +42,8 @@ loading = True
 
 
 def commands(command):
-    global left_click_flag, right_click_flag, gesture_label
+    global left_click_flag, right_click_flag, middle_click_flag, gesture_label
+
     if command == "left_click" and left_click_flag:
         pg.leftClick()
         gesture_label = "Click"
@@ -51,6 +53,11 @@ def commands(command):
         pg.rightClick()
         gesture_label = "Right Click"
         print("right clicked at", pg.position())
+
+    elif command == "middle_click" and middle_click_flag:
+        pg.middleClick()
+        gesture_label = "Middle Click"
+        print("middle clicked at", pg.position())
 
     elif command == "move":
         global prev_cursor_pos
@@ -95,6 +102,7 @@ def commands(command):
         os.system('cls')
         print("closed")
 
+
 id_title = {8: 'Left Click', 12: 'Right Click', 16: 'Desktop', 20: 'Close'}
 
 while True:
@@ -107,7 +115,6 @@ while True:
 
     if loading:
         cv2.putText(img, "Loading Hand Tracking...", (50, 100), cv2.FONT_HERSHEY_SIMPLEX, 1.2, (0, 255, 255), 3)
-
 
     if not success:
         break
@@ -150,6 +157,13 @@ while True:
                 right_click_flag = False
             else:
                 right_click_flag = True
+
+            # Middle Click
+            if 4 in id_loc_dict and 20 in id_loc_dict and distance(id_loc_dict[4], id_loc_dict[20]) < 35:
+                threading.Thread(target=commands, args=("middle_click",)).start()
+                middle_click_flag = False
+            else:
+                middle_click_flag = True
 
             # Desktop
             if 4 in id_loc_dict and 16 in id_loc_dict and distance(id_loc_dict[4], id_loc_dict[16]) < 35:

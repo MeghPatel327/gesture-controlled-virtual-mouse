@@ -7,6 +7,7 @@ A computer vision-based Virtual Mouse that allows users to control their compute
 * Cursor movement using finger gestures
 * Left-click gesture
 * Right-click gesture
+* Middle-click gesture
 * Scroll up/down using hand movement
 * Show Desktop shortcut gesture
 * Close application gesture
@@ -23,23 +24,7 @@ A computer vision-based Virtual Mouse that allows users to control their compute
 * MediaPipe
 * PyAutoGUI
 * Threading
-
----
-
-## 📦 Installation
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/yourusername/virtual-mouse.git
-cd virtual-mouse
-```
-
-### 2. Install Required Packages
-
-```bash
-pip install opencv-python mediapipe pyautogui
-```
+* Math
 
 ---
 
@@ -49,20 +34,21 @@ pip install opencv-python mediapipe pyautogui
 python Virtual_mouse.py
 ```
 
-Make sure your webcam is connected and accessible.
+Make sure your webcam is connected and accessible. Close any other applications that are using the webcam.
 
 ---
 
 ## 🎮 Gesture Controls
 
-| Gesture                                     | Action            |
-| ------------------------------------------- | ----------------- |
-| Index Finger + Middle Finger close together | Move Cursor       |
-| Thumb + Index Finger touch                  | Left Click        |
-| Thumb + Middle Finger touch                 | Right Click       |
-| Middle Finger + Ring Finger close together  | Scroll            |
-| Thumb + Ring Finger touch                   | Show Desktop      |
-| All Fingers Folded                          | Close Application |
+| Gesture                                     | Action          |
+| ------------------------------------------- | ----------------|
+| Index Finger + Middle Finger close together | Move Cursor     |
+| Thumb + Index Finger touch                  | Left Click      |
+| Thumb + Middle Finger touch                 | Right Click     |
+| Thumb + Ring Finger touch                   | Show Desktop    |
+| Thumb + Pinky Finger touch                  | Middle Click    |
+| Middle Finger + Ring Finger close together  | Scroll          |
+| All Fingers Folded                          | Close Programm  |
 
 ---
 
@@ -93,29 +79,31 @@ virtual-mouse/
 * Windows 10/11
 * Python 3.8+
 * Webcam
-* Internet connection (for initial package installation)
+
+---
+
+## 🖱️ Mouse Functions Supported
+
+This project supports all primary mouse functions:
+
+* Cursor Movement
+* Left Click
+* Right Click
+* Middle Click
+* Scroll Wheel
 
 ---
 
 ## Future Improvements
 
-* Multi-hand support
-* Drag and drop gesture
 * Gesture customization
 * Smoother cursor tracking
 * Machine learning-based gesture recognition
-* Cross-platform optimization
-
----
-
-## 📸 Demo
-
-Add screenshots, GIFs, or a demo video here to showcase the project.
 
 ---
 
 ## 👨‍💻 Author
 
-Megh Patel
+**Megh Patel**
 
-Developed as a Computer Vision and Human-Computer Interaction project using OpenCV and MediaPipe.
+Developed as a Computer Vision and Human-Computer Interaction project using OpenCV, MediaPipe, and PyAutoGUI.

@@ -42,7 +42,7 @@ Make sure your webcam is connected and accessible. Close any other applications 
 
 | Gesture                                     | Action          |
 | ------------------------------------------- | ----------------|
-| Index Finger + Middle Finger close together | Move Cursor     |
+| Index Finger + Middle Finger close together | Move Cursor   |
 | Thumb + Index Finger touch                  | Left Click      |
 | Thumb + Middle Finger touch                 | Right Click     |
 | Thumb + Ring Finger touch                   | Show Desktop    |
